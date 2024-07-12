@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+#login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#login-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#main-content {
+    display: none;
+}
+.hidden {
+    display: none;
+}
+h1, h2, h3, h4 {
+    color: #333;
+}
+p {
+    line-height: 1.6;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.balloon {
+    position: absolute;
+    bottom: -100px;
+    width: 50px;
+    height: 70px;
+    background-color: red;
+    border-radius: 50%;
+    animation: rise 5s infinite ease-in-out;
+}
+.balloon::before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background-color: red;
+}
+.balloon:nth-child(2) {
+    left: 30%;
+    animation-delay: 1s;
+    background-color: blue;
+}
+.balloon:nth-child(3) {
+    left: 50%;
+    animation-delay: 2s;
+    background-color: green;
+}
+.balloon:nth-child(4) {
+    left: 70%;
+    animation-delay: 3s;
+    background-color: yellow;
+}
+.happy-birthday {
+    font-size: 2em;
+    color: #ff69b4;
+    animation: glow 1s infinite alternate;
+}
+@keyframes rise {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-600px);
+    }
+}
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4, 0 0 40px #ff69b4, 0 0 50px #ff69b4;
+    }
+    to {
+        text-shadow: 0 0 20px #ff69b4, 0 0 30px #ff69b4, 0 0 40px #ff69b4, 0 0 50px #ff69b4, 0 0 60px #ff69b4;
+    }
+}
